@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+    #crossfade > img { 
+        top: auto;
+        left: 0;
+        width: 100%;
+        height: 450px;
+        position: absolute;
+        color: transparent;
+        opacity: 0;
+        z-index: 0;
+        -webkit-backface-visibility: hidden;
+        -webkit-animation: imageAnimation 16s linear infinite 0s;
+        -moz-animation: imageAnimation 16s linear infinite 0s;
+        -o-animation: imageAnimation 16s linear infinite 0s;
+        -ms-animation: imageAnimation 16s linear infinite 0s;
+        animation: imageAnimation 16s linear infinite 0s; 
+    }
+
+    #crossfade > img:nth-child(2)  {
+        -webkit-animation-delay: 6s;
+        -moz-animation-delay: 6s;
+        -o-animation-delay: 6s;
+        -ms-animation-delay: 6s;
+        animation-delay: 6s; 
+    }
+    #crossfade > img:nth-child(3) {
+        -webkit-animation-delay: 12s;
+        -moz-animation-delay: 12s;
+        -o-animation-delay: 12s;
+        -ms-animation-delay: 12s;
+        animation-delay: 12s; 
+    }
+
+    @-webkit-keyframes imageAnimation { 
+        0% { opacity: 0;
+        -webkit-animation-timing-function: ease-in; }
+        25% { opacity: 1;
+            -webkit-animation-timing-function: ease-out; }
+        100% { opacity: 0 }
+    }
+
+    @-moz-keyframes imageAnimation { 
+        0% { opacity: 0;
+        -moz-animation-timing-function: ease-in; }
+        25% { opacity: 1;
+            -moz-animation-timing-function: ease-out; }
+        100% { opacity: 0 }
+    }
+
+    @-o-keyframes imageAnimation { 
+        0% { opacity: 0;
+        -o-animation-timing-function: ease-in; }
+        25% { opacity: 1;
+            -o-animation-timing-function: ease-out; }
+        100% { opacity: 0 }
+    }
+
+    @-ms-keyframes imageAnimation { 
+        0% { opacity: 0;
+        -ms-animation-timing-function: ease-in; }
+        25% { opacity: 1;
+            -ms-animation-timing-function: ease-out; }
+        100% { opacity: 0 }
+    }
+
+    @keyframes imageAnimation { 
+        0% { opacity: 0;
+        animation-timing-function: ease-in; }
+        25% { opacity: 1;
+            animation-timing-function: ease-out; }
+        100% { opacity: 0 }
+    }
+    .image-response {
+        height: 500px;
+        width: 100%;
+        position: relative;
+        padding: 40px;
+    }
+    .post-customer {
+        background-color: #ff9696;
+        height: 300px;
+        top: 40px;
+        position: relative;
+    }
+    .post-driver {
+        background-color: #66d0f6;
+        height: 300px;
+        top: 40px;
+        position: relative;
+    }
+    .container .content-post {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: rgb(0, 0, 0); /* Fallback color */
+        background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+        color: #f1f1f1;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+</style>
+<body data-spy="scroll" style="background-color: #EFF5F8; font-size: 22px;">
+    <div class="container">
+        <div class="image-response">
+            <div id="crossfade">
+                <img src="https://firebasestorage.googleapis.com/v0/b/truck-sharing-ba678.appspot.com/o/test%2Fpagehome1.png?alt=media&token=d58e762b-50d3-4f22-96ae-2e8ffea6bdde" ></img>
+                <img src="https://firebasestorage.googleapis.com/v0/b/truck-sharing-ba678.appspot.com/o/test%2Fpagehome2.png?alt=media&token=169a2bfd-8b74-4a74-82a9-520300271567" ></img>
+                <img src="https://firebasestorage.googleapis.com/v0/b/truck-sharing-ba678.appspot.com/o/test%2Fpagehome3.png?alt=media&token=08bcd771-d86d-4753-ad41-dff3bb584c57"></img>
+            </div>
+        </div>
+        <hr>
+        <div class="row" style="margin-top: 20px">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div style="font-weight: bold;">
+                    荷物を送りたいとは？
+                </div>
+                <div>荷物を送りたい企業と空き車両で</div>
+                <div>仕事を受注したい運送会社を</div>
+                <div>マッチングするサービスです。</div>
+                <div style="color: red;">荷主を救い、運送業者を守るアプリです。</div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <video width="100%" height="240" controls>
+                    <source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <hr>
+        <div style="font-weight: bold;">
+            サービス概要？
+        </div>
+        <div>トラックシェアリングは3つのシステムで構成されています。</div>
+        <div>01、荷主用アプリ「トラックシェアリング」（スマホもしくはタブレット）</div>
+        <div>02、ドライバー用アプリ「TSドライバー」（スマホもしくはタブレット）</div>
+        <div>03、運送会社配車WEBシステム「トラックシェアリング」（PC）</div>
+        <div>荷主はアプリから荷物情報を登録し、運送会社を探して配送依頼をします。</div>
+        <div>運送会社はWEBシステムから荷物情報に応募し、依頼を受けます。</div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6" style="height: 380px">
+                <div style="font-weight: bold; color: #ff5050;text-align: center;font-size: 26px;">荷主様</div>
+                <div style="z-index: 0;" class="post-customer">
+                </div>
+                <div style="position: relative; top: -280px; z-index: 1;padding-left: 40px; padding-right: 40px;">
+                        <img height="340px" width="100%"
+                            src="https://firebasestorage.googleapis.com/v0/b/truck-sharing-ba678.appspot.com/o/test%2Fpagehome2.png?alt=media&token=169a2bfd-8b74-4a74-82a9-520300271567"></img>
+                        <div class="content-post">
+                            <p>急ぎ配送を求める荷主を「救う」アプリ</p>
+                        </div>
+                </div>
+                <div class="row">
+                    <img height="70px" width="70px" src="https://firebasestorage.googleapis.com/v0/b/truck-sharing-ba678.appspot.com/o/test%2Ficon-customer.png?alt=media&token=3ea66296-9211-410c-abdf-2864c71aba36"/>
+                    <div>
+                        <p>荷主用アプリ</p>
+                        <p style="margin-top: 0px;">荷主用アプリ</p> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6" style="height: 350px">
+                <div style="font-weight: bold; color: #00b0f0;text-align: center; font-size: 26px;">運送業者様</div>
+                <div class="post-driver">
+                </div>
+                <div style="position: relative; top: -280px; z-index: 1;">
+                    <div style="padding-left: 40px; padding-right: 40px;">
+                        <img height="340px" width="100%"
+                            src="https://firebasestorage.googleapis.com/v0/b/truck-sharing-ba678.appspot.com/o/test%2Fpost-driver.png?alt=media&token=ab22f860-e1d2-4b74-a52f-9b75a19ecaad"></img>
+                        <div class="content-post">
+                            <p>価格競争から運送業者を守る」アプリ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
